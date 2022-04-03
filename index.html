@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css" type="text/css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Cillian O'Keeffe">
+        <meta name="Description" content="Cillian O'Keeffe artist portfolio">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <title>Home</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Open+Sans:wght@300;400&display=swap');
+        </style>
+    </head>
+
+    <body id="homepage">
+        <div id="container">
+            <a href="home.html">
+                <nav>
+                    <img src="images/Ram_skull_inked.png" alt="Ram skull logo">
+                    <a href="home.html">cillianokeeffeart</a>
+                    <ul class="menu">
+                        <li><a class="menuItem" href="#">Home</a></li>
+                        <li><a class="menuItem" href="#">About</a></li>
+                        <li><a class="menuItem" href="#">Gallery</a></li>
+                        <li><a class="menuItem" href="#">Contact</a></li>
+                    </ul>
+                    <button class="hamburger">
+                        <i class="menuIcon material-icons">menu</i>
+                        <i class="closeIcon material-icons" id="close">close</i>
+                    </button>
+                </nav>
+            </a>
+            <header>
+                <div>
+                    <div id="floatbox">
+                        <div class="shape"></div>
+                        <h2>Artist</h2>
+                        <p>My name is Cillian O'Keeffe and I'm an artist from Carrigaline, Co. Cork. I'm currently studying Creative Digital Media in MTU. 
+                        </p>
+                    </div>
+                </div>
+            </header>
+
+        <div id="main">
+            <div class="row">
+                <div class="column">
+                    <img id="rubyrefelct" src="images/gallery/artwork/Ruby Reflections.jpg">   
+                    <img id="rennes" src="images/gallery/artwork/Rennes.JPG">
+                </div>
+                <div class="column">
+                    <img id="ramskull" src="images/gallery/artwork/Ram_skull__W_Background.jpg.jpeg">
+                    <img id="tommyshelby" src="images/gallery/artwork/shelby.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+          
+            <footer>
+              FOOTER
+            </footer>
+          </div>
+
+    <script>
+        const menu = document.querySelector(".menu");
+        const menuItems = document.querySelectorAll(".menuItem");
+        const hamburger= document.querySelector(".hamburger");
+        const closeIcon= document.querySelector(".closeIcon");
+        const menuIcon = document.querySelector(".menuIcon");
+
+        function toggleMenu() {
+        if (menu.classList.contains("showMenu")) {
+            menu.classList.remove("showMenu");
+            closeIcon.style.display = "none";
+            menuIcon.style.display = "block";
+        } else {
+            menu.classList.add("showMenu");
+            closeIcon.style.display = "block";
+            menuIcon.style.display = "none";
+        }
+        }
+
+        hamburger.addEventListener("click", toggleMenu);
+
+        menuItems.forEach( 
+        function(menuItem) { 
+            menuItem.addEventListener("click", toggleMenu);
+        }
+        )
+    </script>
+    </body>
